@@ -103,7 +103,7 @@
 						{Position}:
 					</td>
 					<td class="data">
-						<a onmouseover="mr_tooltip('{Position_desc}')" onmouseout="UnTip()">
+						<a onmouseover="mr_tooltip('{Position_desc}')" onmouseout="UnTip()" onclick="loadpage(this.href,'{Galaxy}','galaxy'); return false;" href="./?page=galaxy&mode=1&galaxy={galaxy}&system={system}">
 							[{galaxy}:{system}:{planet}]
 						</a>
 					</td>
@@ -115,6 +115,7 @@
 					</td>
 					<td class="data">
 						<a onmouseover="mr_tooltip('{Points_desc}')" onmouseout="UnTip()">
+						<a onmouseover="mr_tooltip('{Points_desc}')" onmouseout="UnTip()" onclick="loadpage(this.href,'{Statistics}','statistics'); return false;" href="./?page=statistics&start=own">
 							{total_points} ({Rank} {user_rank} {of} {players})
 						</a>
 					</td>

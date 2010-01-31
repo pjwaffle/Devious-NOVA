@@ -14,7 +14,8 @@ $lang['changelog']   = array(
 - More helpful cookie messages. (Anthony)
 - Fixed a bug in CR generation. (Anthony)
 - Fleet dispatch from moons now sorted. (Placebo)
-- Fixed bug in Facilities page were quick upgrade went to Resources page with Facilities CSS. (Anthony)',
+- Fixed bug in Facilities page were quick upgrade went to Resources page with Facilities CSS. (Anthony)'
+- Links to Statistics and Galaxy set up in Overview. (darksoldier)',
 
 '1 &beta;12' => '- Fixed bug in Resources bar where < was comparing values alphabetically, not numerically so \'11\' < \'9\'. (Anthony)
 - ^ Fixed same bug in fleet dispatch. (Anthony)
