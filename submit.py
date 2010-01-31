@@ -31,7 +31,7 @@ for line in output.split('\n'):
 		print result[1] + ' added to SVN';
 		n += 1
 	else:
-		t+= 1
+		t += 1
 
 #How many files were added / edited
 if n == 1:

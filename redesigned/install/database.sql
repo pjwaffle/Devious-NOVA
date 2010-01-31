@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 31, 2009 at 11:02 PM
+-- Generation Time: Jan 30, 2010 at 11:57 PM
 -- Server version: 5.1.37
--- PHP Version: 5.2.10-2ubuntu6.3
+-- PHP Version: 5.2.10-2ubuntu6.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}aks` (
   `eingeladen` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}alliance` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `ally_name` (`ally_name`),
   UNIQUE KEY `ally_tag` (`ally_tag`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}annonce` (
   `crystals` bigint(11) NOT NULL,
   `deuts` bigint(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}banned` (
   `email` varchar(155) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `who` (`who`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}buddy` (
   `text` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sender` (`sender`,`owner`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -132,8 +132,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}chat` (
   `timestamp` int(11) NOT NULL DEFAULT '0',
   `ally_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`messageid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -142,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}chat` (
 --
 
 CREATE TABLE IF NOT EXISTS `{{prefix}}config` (
-  `config_name` varchar(64) NOT NULL default '',
+  `config_name` varchar(64) NOT NULL DEFAULT '',
   `config_value` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -216,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}cr` (
   `damage` bigint(11) NOT NULL,
   `time` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -232,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}errors` (
   `error_text` text,
   `error_page` text,
   PRIMARY KEY (`error_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -261,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}fleets` (
   `fleet_mess` int(11) NOT NULL DEFAULT '0',
   `passkey` int(7) NOT NULL,
   PRIMARY KEY (`fleet_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin14 ;
 
 -- --------------------------------------------------------
 
@@ -277,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}im` (
   `expires` int(11) NOT NULL DEFAULT '0',
   `message` text CHARACTER SET latin1 COLLATE latin1_german2_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -296,7 +295,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}messages` (
   `message_text` text,
   `message_deleted` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`message_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -312,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}notes` (
   `title` varchar(32) DEFAULT NULL,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -422,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}planets` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `indentity` (`galaxy`,`system`,`planet`,`planet_type`),
   KEY `galaxy_system_planet` (`galaxy`,`system`,`planet`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -499,7 +498,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}supp` (
   `text` longtext NOT NULL,
   `status` int(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -670,4 +669,4 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
