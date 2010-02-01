@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}fleets` (
   `fleet_mess` int(11) NOT NULL DEFAULT '0',
   `passkey` int(7) NOT NULL,
   PRIMARY KEY (`fleet_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
