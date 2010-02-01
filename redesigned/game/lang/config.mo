@@ -8,6 +8,7 @@ $basedlang = array(
 	'de' => DEFAULT_LANG,
 	'it' => DEFAULT_LANG,
 	'ro' => DEFAULT_LANG,
+	'pl' => DEFAULT_LANG,
 	
 	'us' => 'en',
 );
