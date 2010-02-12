@@ -86,8 +86,15 @@ $info .= '<input type="hidden" name="fleet_array" value=\''.serialize($fleet).'\
 
 $parse['fleetinfo'] = $info;
 
+//Generate shortcuts
+foreach ( explode(";",$user['fleet_shortcut']) as $shortcut){
+if(strlen($shortcut) > 0){
+$shortcut = explode("-",$shortcut);
+$sh .= '<option value="'.$shortcut[0].'">'.$shortcut[1].'</option>'."\n";
+}}
+$parse['shsh'] = $sh;
 
-
+//Axah
 $page = parsetemplate(gettemplate('fleet/2'), $parse);
 if($_GET['axah']){
 	makeAXAH($page);
