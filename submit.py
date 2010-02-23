@@ -54,5 +54,5 @@ t = '"' + t + '"'
 s = subprocess.call(['svn','commit','-m',t])
 
 #Wait to quit
-#t = raw_input("Press enter to exit")
-os.system('pause')
+raw_input("Press enter to exit")
+#os.system('pause')
