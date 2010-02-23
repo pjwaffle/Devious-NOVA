@@ -110,7 +110,7 @@ rounddata[0] = {
 #For each round...
 for round in range(1,(maxrounds+1)):
 	#Backup the defending fleet first
-	backup = PHPSerialize().serialize(defenders)	
+	defenders_before = defenders.copy()	
 	
 	#Total ships
 	fleet_totals = {}
@@ -346,7 +346,6 @@ for round in range(1,(maxrounds+1)):
 									stopfiring = True #we are ignoring it
 
 		#print "-"
-		defenders_before = PHPUnserialize().unserialize(backup)
 		
 		#Next defender fires, so, for each defender.
 		for fleetid,info in defenders_before.iteritems():
