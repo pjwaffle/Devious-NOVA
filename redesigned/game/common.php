@@ -8,7 +8,7 @@
  */
 
 // This is purely for the sake of the admin panel, do not, change it, instead change the version in cahngelog.mo
-define('VERSION','beta12');       // Current XNova version
+define('VERSION','beta13');       // Current XNova version
 
 //Check rootpath
 //$info =debug_backtrace();
