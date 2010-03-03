@@ -139,7 +139,7 @@ if(!INSTALL){
 		//Log them out (unless we are on the login page).
 		if(!defined('LOGIN') || LOGIN != true){
 			if(!in_array($_GET['page'],$login_not_required)){
-				if($_GET['demo'] = 'special'){
+				if($_GET['demo'] == 'special'){
 					$user['skin'] = "http://xnovauk.com/skins/xr/";
 				}else{
 					header("Location: ".LOGINURL);

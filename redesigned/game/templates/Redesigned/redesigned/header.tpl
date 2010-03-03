@@ -2,6 +2,7 @@
 <body id="{bodyid}">
 <script type="text/javascript" src="./scripts/wz_tooltip.js"></script>
 
+
 <input type="hidden" id="planet_ext" value="{planet_ext}" />
 <input type="hidden" id="cur_page" value="" />
 

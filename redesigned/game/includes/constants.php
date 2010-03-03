@@ -18,7 +18,7 @@ if ( defined('INSIDE') ) {
 	define('TEMPLATE_NAME'				, 'Redesigned');
 	define('DEFAULT_LANG'				, 'en');
 	
-	define('XNOVAUKLINK'				, 'http://xnovauk.com/');
+  define('XNOVAUKLINK' , 'http://xnovaredesigned.co.cc/');
 
 
 

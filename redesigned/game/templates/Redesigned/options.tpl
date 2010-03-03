@@ -48,6 +48,7 @@
 								document.getElementById('three').style.display = 'block';
 								document.getElementById('four').style.display = 'none';
 								fadeIn('three',0);
+								return false;
 								" id="tabRepresentation" title="Display settings, e.g. galaxy view, sequence of planets...">
 								<span>Display</span>
 							</a>
