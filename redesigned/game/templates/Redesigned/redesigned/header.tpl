@@ -35,7 +35,7 @@
 	<ul id="resources">
 	   	<li class="metal tips">
 	   		<a>
-				<img src="{skin}img/navigation/ressourcen_metall.gif" />
+				<img src="{{skin}}/img/navigation/ressourcen_metall.gif" />
 				<span class="value">
 					<font id="resources_metal">{kmetal}</font>
 				</span>
@@ -44,7 +44,7 @@
 		</li>
 		<li class="crystal tips">
 			<a>
-				<img src="{skin}img/navigation/ressourcen_kristal.gif" />
+				<img src="{{skin}}/img/navigation/ressourcen_kristal.gif" />
 				<span class="value">
 					<font id="resources_crystal">{kcrystal}</font>
 				</span>
@@ -53,7 +53,7 @@
 		</li>
 		<li class="deuterium tips">
 			<a>
-				<img src="{skin}img/navigation/ressourcen_deuterium.gif" />
+				<img src="{{skin}}/img/navigation/ressourcen_deuterium.gif" />
 				<span class="value">
 					<font id="resources_deuterium">{kdeut}</font>
 			   	</span>
@@ -62,7 +62,7 @@
 		</li>
 		<li class="energy tips">
 			<a>
-				<img src="{skin}img/navigation/ressourcen_energie.gif" />
+				<img src="{{skin}}/img/navigation/ressourcen_energie.gif" />
 				<span class="value">
 					<font id="resources_energy"{energy_red}>{energy}</font>
 				</span>
@@ -71,7 +71,7 @@
 		</li>
 		<li	class="darkmatter tips">
 			<a onclick="loadpage('./?page=premium','{Officers}','premium'); return false;" href="./?page=premium">
-				<img src="{skin}img/navigation/ressourcen_DM.gif" />
+				<img src="{{skin}}/img/navigation/ressourcen_DM.gif" />
 				<span class="value">
 					<span id="resources_matter">{matter}</span>
 				</span>

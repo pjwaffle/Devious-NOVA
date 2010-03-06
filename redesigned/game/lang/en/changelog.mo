@@ -14,8 +14,11 @@ $lang['changelog']   = array(
 - More helpful cookie messages. (Anthony)
 - Fixed a bug in CR generation. (Anthony)
 - Fleet dispatch from moons now sorted. (Placebo)
-- Fixed bug in Facilities page were quick upgrade went to Resources page with Facilities CSS. (Anthony)'
-- Links to Statistics and Galaxy set up in Overview. (darksoldier)',
+- Fixed bug in Facilities page were quick upgrade went to Resources page with Facilities CSS. (Anthony)
+- Links to Statistics and Galaxy set up in Overview. (darksoldier)
+- Galaxy View now uses floating divs and renders properly in WebKit. (Anthony)
+- Fixed a small bug in the header. (Anthony)
+- Improved Python battle engine dictiorary handling. (Anthony)',
 
 '1 &beta;12' => '- Fixed bug in Resources bar where < was comparing values alphabetically, not numerically so \'11\' < \'9\'. (Anthony)
 - ^ Fixed same bug in fleet dispatch. (Anthony)

@@ -11,6 +11,11 @@ import commands
 #Update the files
 r = subprocess.call(['cp','/var/www/redesigned/','./','-Ruv'])
 
+#Update status
+status = open('./redesigned/status','w')
+status.write('NOTINSTALLED')
+status.close()
+
 #Now see what has changed
 output = commands.getoutput('svn status')
 print output
@@ -54,5 +59,5 @@ t = '"' + t + '"'
 s = subprocess.call(['svn','commit','-m',t])
 
 #Wait to quit
-raw_input("Press enter to exit")
+raw_input("Press enter to exit.")
 #os.system('pause')

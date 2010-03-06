@@ -38,8 +38,6 @@ if($_GET['amount'] == 1000000){
 	$cost = $darkmattercosts[100];
 }
 
-$cost = '0.01';
-
 switch ($_GET['action']) {
 case 'success':
 	// Order was successful...

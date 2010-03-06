@@ -16,4 +16,10 @@ print " "
 print "... Done"
 
 #Wait to quit
-t = raw_input("Press enter to exit")
+t = raw_input("Press enter to update files on localhost server.")
+
+#Update the files
+r = subprocess.call(['cp','./redesigned/','/var/www/','-Ru'])
+
+#Wait to quit
+t = raw_input("Press enter to exit.")
