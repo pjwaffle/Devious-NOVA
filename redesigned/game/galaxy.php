@@ -3,8 +3,8 @@
 /**
  * galaxy.php
  *
- * @version 1.3
- * @copyright 2008 by Chlorel for XNova
+ * @version 2.1
+ * @copyright 2010 by MadnessRed for XNova
  */
 
 includeLang('galaxy');
@@ -40,8 +40,7 @@ $bloc['curfleets'] = $bloc['curfleets']['count'];
 $bloc['cgal'] = $galaxy;
 $bloc['csys'] = $system;
 
-$page = parsetemplate(gettemplate('galaxy/galaxy'), $bloc);
-
+$page = parsetemplate(gettemplate('galaxy/galaxy_div'), $bloc);
 
 /*
 $userally = doquery("SELECT `relations` FROM {{table}} WHERE `id` = '".$user['ally_id']."' LIMIT 1 ;",'alliance',true);
@@ -68,4 +67,6 @@ if($_GET['axah']){
 // 1.1 - Modified by -MoF- (UGamela germany)
 // 1.2 - 1er Nettoyage Chlorel ...
 // 1.3 - 2eme Nettoyage Chlorel ... Mise en fonction et debuging complet
+// 2.0 - Practically scratch re-written for XNova Redesigned - MadnessRed
+// 2.1 - Converted to use divs rather than tables to provide webkit support more efficiently
 ?>

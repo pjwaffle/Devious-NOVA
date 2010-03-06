@@ -3,7 +3,7 @@
 			<td class="position" style="background-image:url('{{skin}}/img/galaxy/row-bg.gif');background-position:-5px;">{pos}</td>
 			{td_microplanet}
 			<td class="planetname" style="background-image:url('{{skin}}/img/galaxy/row-bg.gif');background-position:-70px;">{planet_name_short}<!--(<span class='undermark'>28</span>)--></td>
-			<td class="moon" style="background-image:url('{{skin}}/img/galaxy/row-bg.gif');background-position:-232px;">
+			<td class="moon" style="background-image:url('{{skin}}/img/galaxy/row-bg.gif');background-position:-235px;">
 			{td_moon}
 			</td>
 			

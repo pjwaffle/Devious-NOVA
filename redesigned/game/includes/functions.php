@@ -112,6 +112,14 @@ function sha($string,$salt=''){
 	}
 }
 
+function GetAvatar($email, $size = 0){
+	$grav_url = "http://www.gravatar.com/avatar.php?gravatar_id=".md5(strtolower($email))."&default=".urlencode(AVATAR)."&r=".AVATAR_RATING;
+	if($size > 0){
+		$grav_url .= '&size='.$size;
+	}
+	return $grav_url;
+}
+
 function LeadingZeros($number,$zeros) {
 	return str_pad((int) $number,$zeros,"0",STR_PAD_LEFT);
 }

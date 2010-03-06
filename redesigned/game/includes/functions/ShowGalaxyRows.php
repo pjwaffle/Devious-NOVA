@@ -124,21 +124,9 @@ function ShowGalaxyRows ($Galaxy, $System) {
 		$pt = PlanetType($GalaxyRowPlanet['image']);
 		$parse['micro_planet_img'] = "img/planets/micro/".$pt['type']."_".$pt['subtype']."_1.gif";
 		
-		//Player Stuff
-		if(!$GalaxyRowPlayer['avatar']){
-			$parse['avatar_small'] = '';
-		}elseif(file_exists($GalaxyRowPlayer['avatar'])){
-			$parse['avatar_small'] = '<img src=./img/smallimage.php?source=../'.$GalaxyRowPlayer['avatar'].'&size=50 alt=Player&nbsp;avatar border=0 />';
-		}elseif(@url_exists($GalaxyRowPlayer['avatar'])){
-			$parse['avatar_small'] = '<img src=./img/smallimage.php?source='.$GalaxyRowPlayer['avatar'].'&size=50 alt=Player&nbsp;avatar border=0 />';
-		}
-		
-		//Se l'utente non ha un'avatr di defaul viene assegnato il percorso ../img/no_avatar.gif e non viene riconosciuto dai controlli sopra
-		//Adesso Li Inculliamo :P
-		if($GalaxyRowPlayer['avatar']=="img/no_avatar.gif"){
-			//$parse['avatar_small'] = '<img src=../../img/no_avatar.gif height=50 width=50 alt=Player&nbsp;avatar border=0 />';
-			$parse['avatar_small'] = '<img src=../'.$GalaxyRowPlayer['avatar'].' height=50 width=50 alt=Player&nbsp;avatar border=0 />';
-		}
+		//Player Stuff		
+		$parse['avatar_small'] = '<img src='.GetAvatar($GalaxyRowPlayer['email'],50).' alt=Player&nbsp;avatar border=0 />';
+
 		//Visualizzo il Rank del Player :
 		$Rank = doquery("SELECT * FROM {{table}} WHERE `stat_type` = '1' AND `stat_code` = '1' AND `id_owner` = '". $GalaxyRowPlayer['id'] ."';", 'statpoints');
 		$parse['rank'] = $Rank['total_rank'];
@@ -149,8 +137,11 @@ function ShowGalaxyRows ($Galaxy, $System) {
 		
 		//PlanetIMG
 		if($noplanet){
-			$parse['td_microplanet'] = "<td class=\"microplanet1\"></td>";
-			$parse['td_playername']  = "<td class=\"playername\"></td>";
+			$parse['td_microplanet'] = "";
+			$parse['td_microplanet_class'] = 'microplanet1';
+			$parse['td_microplanet_extra'] = '';
+			$parse['td_microplanet_style'] = '';
+			$parse['td_playername']  = "";
 		}else{
 			if($CanPhalanx && $GalaxyRowPlayer['id'] != $user['id']){
 				//$parse['phalanx'] = "<li><a href=# onclick=loadpage(\'./?page=phalanx\',\'".$lang['Phalanx']."\',\'fleet1\');>".$lang['Phalanx']."</a></li>";
@@ -160,6 +151,9 @@ function ShowGalaxyRows ($Galaxy, $System) {
 				$parse['phalanx'] = "";
 			}
 			$parse['td_microplanet'] = parsetemplate(gettemplate('galaxy/microplanet'), $parse);
+			$parse['td_microplanet_class'] = 'TTgalaxy microplanet';
+			$parse['td_microplanet_extra'] = 'rel="#planet{pos}"';
+			$parse['td_microplanet_style'] = 'background:url('.GAME_SKIN.'/'.$parse['micro_planet_img'].') no-repeat top center;';
 			$parse['td_playername']  = parsetemplate(gettemplate('galaxy/playername'), $parse);
 		}
 		
@@ -215,13 +209,7 @@ function ShowGalaxyRows ($Galaxy, $System) {
 		
 		
 		//Now make the whole row
-		if (stripos($_SERVER['HTTP_USER_AGENT'], 'AppleWebKit') !== false) {
-			//We have a webkit browser, slightly differnt template.
-			$Result .= parsetemplate(gettemplate('galaxy/galaxyrow_webkit'), $parse);
-		}else{
-			$Result .= parsetemplate(gettemplate('galaxy/galaxyrow'), $parse);
-		}
-	
+		$Result .= parsetemplate(gettemplate('galaxy/galaxyrow_div'), $parse);
 	}
 
 	return $Result;

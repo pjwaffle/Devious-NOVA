@@ -1,4 +1,3 @@
-			<td class="playername inactive">
 				<a href="#" class="TTgalaxy" rel="#player{player_id}">
 					<span class="status_abbr_inactive">{player_name}</span>
 					<span class="mrtooltip" style="background-color:transparent;border:0px;top:{tooltip_height}px;left:400px;">
@@ -32,4 +31,3 @@
 					</span>
 				</a>
 				<!--<span class="status">(<span class='status_abbr_inactive'><span class="status_abbr_inactive">i</span></span>)</span>-->{status}
-			</td>
