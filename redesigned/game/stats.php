@@ -11,15 +11,19 @@
 mod($x) - runs the modulus |$x|
 idstring($x) - returns all the numbers in a string, eg 1a2b3c.4d returns 1234 unless arg 2 is true, then 123.4
 */
+
 getLang('stat');
+
 $parse = $lang;
 if(idstring($_GET['p']) > 0){
 	$p = (idstring($_GET['p']) - 1) * 100;
 }else{
 	$p = floor((USER_RANK-1) / 100) * 100;
 }
+
 if($p < 0){ $p = 0; }
 $parse['time_of'] = date("d M Y - H:i:s", $game_config['last_reload']);
+
 if($_GET['sort'] == 'fleet'){
 	$sort = 'fleet';
     $parse['class_4'] = 'active';
@@ -183,11 +187,21 @@ if($_GET['who'] == 'ally'){
 		if($statrow['id'] == $user['id']){
 			$alt = ' class="myrank"';
 		}
-		//print_r($statrow);
+		
+		
+		//see if we are tied
+		if($statrow[$sort."_points"] == $last){
+			$pos = '='
+		}else{
+			$last = $statrow[$sort."_points"];
+			$pos = $p;
+		}
+		
+		
 		$parse['rows'] .= '
 					<tr'.$alt.'>
 						<!-- rank -->
-						<td class="position">'.($p).'&nbsp;&nbsp;<span '.$ch.' style="cursor:default;">'.$plus.'</span></td>
+						<td class="position">'.$pos.'&nbsp;&nbsp;<span '.$ch.' style="cursor:default;">'.$plus.'</span></td>
 						
 						<!-- nick -->
 						<td class="name">
