@@ -201,7 +201,7 @@ if($_GET['who'] == 'ally'){
 		$parse['rows'] .= '
 					<tr'.$alt.'>
 						<!-- rank -->
-						<td class="position">'.$pos.'&nbsp;&nbsp;<span '.$ch.' style="cursor:default;">'.$plus.'</span></td>
+						<td class="position">'.$pos.'<!--&nbsp;&nbsp;<span '.$ch.' style="cursor:default;">'.$plus.'</span>--></td>
 						
 						<!-- nick -->
 						<td class="name">
