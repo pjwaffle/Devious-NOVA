@@ -1,4 +1,8 @@
 <?php
+//Presentation
+$lang['presentation']		= 'With officers you can lead your empire to a size beyond your wildest dreams. All you need is some Dark Matter and your workers and advisers will work even harder!';
+$lang['Your_officers']		= 'Your Officers';
+$lang['Recruit_Officers']	= 'Recruit Officers';
 $lang['mess_pagetitle'] = "Premium Account bestellen";
 $lang['titel'] 			= "Premium Account bestellen";
 $lang['bestellen'] 		= "Bestellen";

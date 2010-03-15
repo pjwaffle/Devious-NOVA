@@ -52,11 +52,13 @@ if (strlen($planetrow['build_queue']) > 0) {
 		$queueinfo .= $Queue['buildlist'];
 		$queueinfo .= '</div>';
 		
-	} else {
+} else {
 		$queueinfo  = '<div id="resources_queue_box">';
 		
 		$queueinfo .= '<div class="content-box-s">';
-		$queueinfo .= '<div class="header"><h3>Buildings</h3></div>';
+		$queueinfo .= '<div class="header"><h3>';
+		$queueinfo .= $lang['ov_pts_build'];
+		$queueinfo .='</h3></div>';
 		$queueinfo .= '<div class="content">';
 		
 		$queueinfo .= '<table cellpadding="0" cellspacing="0" class="construction">';

@@ -111,12 +111,13 @@ case 'tree':
 	<html>\n
 	<head>\n
 		<title>"."</title>\n
-		<script type=\"text/javascript\" src=\"./scripts/ECOTree.js\"></script>\n
-		<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/ECOTree.css\" />\n
-		<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/madnessred.css\" />\n
-		<xml:namespace ns=\"urn:schemas-microsoft-com:vml\" prefix=\"v\"/>\n
-		<style>v\:*{ behavior:url(#default#VML);}</style>\n
-		<style>\n
+		                <script type=\"text/javascript\" src=\"./scripts/ECOTree.js\"></script>\n
+                <link type=\"text/css\" rel=\"stylesheet\" href=\"./css/ECOTree.css\" />\n
+                <link type=\"text/css\" rel=\"stylesheet\" href=\"./css/madnessred.css\" />\n
++               <link rel='stylesheet' type='text/css' href='{{skin}}/css/thickbox-iframe.css' media='screen' />
+                <xml:namespace ns=\"urn:schemas-microsoft-com:vml\" prefix=\"v\"/>\n
+                <style>v\:*{ behavior:url(#default#VML);}</style>\n
+                <style>\n
 			.copy {\n
 				font-family : \"Verdana\";\n		
 				font-size : 10px;\n
@@ -146,13 +147,13 @@ case 'tree':
 			}\n	
 		</script>\n
 	</head>\n
-	<body onload=\"CreateTree();\" style=\"height:".($divheightajusts[$Element] + 50)."px;overflow:none;\">\n\n
-	<div style=\"background-image:url('{{skin}}/img/layout/wrap-header.gif');width:667px;height:34px;\"></div>\n
-	<div style=\"background-image:url('{{skin}}/img/layout/wrap-body.gif');width:667px;\">\n<br />\n\n
-		<a class=\"closeTB\" onclick=\"window.parent.mrbox_close();\"><img src=\"{{skin}}/img/layout/pixel.gif\" width=\"16\" height=\"16\" /></a> \n\n
-		<span style=\"margin:12px;text-align:center;\"><font color=white><strong><center>".$lang['tech'][$Element]."</strong></font><br /><br /></center></span>
-		<div id=\"myTreeContainer\" style=\"height:".$divheightajusts[$Element]."px;overflow:none;\"></div>\n
-	</div>\n
+<body onload=\"CreateTree();\" style=\"height:".($divheightajusts[$Element] + 50)."px;overflow:none;\">\n\n
+        <div style=\"background-image:url('{{skin}}/img/layout/wrap-header.gif');width:667px;height:34px;\"></div>\n
+        <div style=\"background-image:url('{{skin}}/img/layout/wrap-body.gif');width:667px;\">\n<br />\n\n
+!               <a href=\"#\" class=\"closeTB\" onclick=\"window.parent.mrbox_close();\"><img src=\"{{skin}}/img/layout/pixel.gif\" width=\"16\" height=\"16\" boarder=\"0\" /></a> \n\n
+                <span style=\"margin:12px;text-align:center;\"><font color=white><strong><center>".$lang['tech'][$Element]."</strong></font><br /><br /></center></span>
+                <div id=\"myTreeContainer\" style=\"height:".$divheightajusts[$Element]."px;overflow:none;\"></div>\n
+        </div>\n
 	<div style=\"background-image:url('{{skin}}/img/layout/wrap-footer.gif');width:667px;height:29px;\"></div>\n
 	</body>\n
 	</html>\n
