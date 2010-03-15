@@ -191,7 +191,7 @@ if($_GET['who'] == 'ally'){
 		
 		//see if we are tied
 		if($statrow[$sort."_points"] == $last){
-			$pos = '='
+			$pos = '=';
 		}else{
 			$last = $statrow[$sort."_points"];
 			$pos = $p;
