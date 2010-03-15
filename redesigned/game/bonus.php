@@ -22,5 +22,7 @@ AddMoon($homeworld['galaxy'],$homeworld['system'],$homeworld['planet'],20,'Free 
 //Now give commander
 doquery("UPDATE {{table}} SET `off_command_exp` = '".(time() + (60 * 60 * 24 * 30 * 3))."' WHERE `id` = '".$user['id']."' ;",'users');
 
+//set bonus to 1
+doquery("UPDATE {{table}} SET `bonus` = 1 ;",'users') ;
 ?>
 There is now a moon in orbit around your homeworld and you have commander for free for 3 months.

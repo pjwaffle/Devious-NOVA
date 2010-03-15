@@ -118,7 +118,7 @@
 				<span class="textlabel">{Errors}</span>
 			</a>
 		</li>
-
+    <div style="{show_bonus}">
 		<li class="menubutton_table">
 			<span class="menu_icon">
 		  	</span>
@@ -126,7 +126,7 @@
 				<span class="textlabel"><font color="Red">BONUS!</font></span>
 			</a>
 		</li>
-
+    </div>
 	</ul>
 
 {af}

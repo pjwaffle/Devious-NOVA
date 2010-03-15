@@ -666,6 +666,7 @@ CREATE TABLE IF NOT EXISTS `{{prefix}}users` (
   `raidswin` int(11) DEFAULT NULL,
   `raidsloose` int(11) DEFAULT NULL,
   `last_researcher_search` int(11) NOT NULL DEFAULT '0' COMMENT 'When was the last search for researchers',
+  `bonus` int(2) NOT NULL DEFAULT '0' COMMENT 'Bonus used?',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)

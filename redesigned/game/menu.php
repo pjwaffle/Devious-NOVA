@@ -74,9 +74,12 @@ function ShowLeftMenu($cpage = 'x') {
 	if(date('nj') == '41' || $_GET['april']){
 		$parse['af'] = '<a class="menubutton" style="display:block;left:10.5%;top:489px;z-index:99;background-image:url('.GAME_SKIN.'/img/navigation/link_a.png);width:135px;height:29px;text-align:center;text-docoration:none;padding-top:3px;background-repeat: no-repeat;" onmouseover="this.style.top = Math.floor(Math.random() * (window.innerHeight - 20) + 10)+\'px\';this.style.left = Math.floor(Math.random()*201 + 5)+\'px\'; this.style.position = \'fixed\';" href="./?page=freeres" title="Free Resources"><font color="Red"><strong>Free Resources</strong></font></span></a>';
 	}
-		
+	$bonus = doquery("SELECT bonus FROM {{table}}",'users');	
 
-	$Menu                  = parsetemplate(gettemplate('redesigned/menu'),$parse);
+	if($bonus == '0'){ $parse['show_bonus'] = 'display:none;'; }else{ $parse['show_bonus'] = ''; }
+  $Menu = parsetemplate(gettemplate('redesigned/menu'),$parse);
+
+
 
 	return $Menu;
 }
@@ -87,5 +90,5 @@ function ShowLeftMenu($cpage = 'x') {
 // History version
 // 1.0 - Passage en fonction pour XNova version future
 // 1.1 - Modification pour gestion Admin / Game OP / Modo
-// 1.2 - Modified to support the new redesign. Now longer a standalone page.
+// 1.2 - Modified to support the new redesign. No longer a standalone page.
 ?>
